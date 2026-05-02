@@ -1,0 +1,19 @@
+📁 Application Structure:
+
+.
+├── 📂 data
+│   ├── rooms.dat
+│   ├── users.dat
+├── 📂 include
+│   ├── AppState.h
+│   ├── FileManager.h
+│   ├── Message.h
+│   ├── Person.h
+│   ├── Room.h
+│   ├── UI.h
+│   ├── User.h
+│   ├── Utils.h
+├── main.cpp
+├── Makefile
+├── README.md
+├── weChat.exe
