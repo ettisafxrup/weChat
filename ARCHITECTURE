@@ -1,6 +1,7 @@
 📁 Application Structure:
 
 .
+├── build_log.txt
 ├── 📂 data
 │   ├── rooms.dat
 │   ├── users.dat
@@ -13,7 +14,12 @@
 │   ├── UI.h
 │   ├── User.h
 │   ├── Utils.h
+├── LICENSE
 ├── main.cpp
 ├── Makefile
+├── 📂 object
+│   ├── main.o
 ├── README.md
+├── 📂 release
+│   ├── weChat_v1.0.exe
 ├── weChat.exe

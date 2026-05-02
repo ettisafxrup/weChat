@@ -1,4 +1,5 @@
 # weChat — Let's make Friends 💬
+
 ### A Terminal-Based C++ OOP Chat Application
 
 ---
@@ -14,10 +15,7 @@ make
 ```
 
 Or without make:
-```bash
-g++ -std=c++17 -o weChat main.cpp
-./weChat
-```
+run build files (build.bat if Windows CMD and build.sh if Shell) and you're good to go!
 
 ---
 
@@ -26,11 +24,16 @@ g++ -std=c++17 -o weChat main.cpp
 ```
 weChat/
 ├── main.cpp                  ← Entry point, main application loop
-├── Makefile
-├── data/                     ← Auto-created at runtime
+├── 🔵 object
+│   ├── main.o ← Object file forked from main.cpp
+├── 🔺 release
+│   ├── weChat_v1.0.exe ← All the versions creating after every compile you do.
+    ...
+    ...
+├── 📂 data/                     ← Auto-created at runtime
 │   ├── users.dat             ← Persisted user accounts
 │   └── rooms.dat             ← Persisted rooms + members + messages
-└── include/
+└── 📂 include/
     ├── Utils.h               ← Colors, helpers, timestamp, code gen
     ├── Message.h             ← Message class + Payload<T> template + ISerializable
     ├── Person.h              ← Person (abstract) → Contact, AccountHolder
@@ -45,34 +48,34 @@ weChat/
 
 ## ✅ C++ OOP Concepts Covered
 
-| Concept | Where |
-|---|---|
-| **Classes & Objects** | All header files |
-| **Array of Objects** | `vector<User>`, `vector<Room>`, `vector<Message>` in AppState/Room |
-| **Object References** | `AppState&`, `Room&`, function parameters |
-| **Memory Allocation** | `new AppState()` / `delete instance` in singleton |
-| **Default Constructor** | All classes |
-| **Parameterised Constructor** | All classes |
-| **Copy Constructor** | Message, User, Room, Person, Contact, AccountHolder |
-| **Destructor** | All classes; virtual in hierarchy |
-| **Function Overloading** | `addMessage()`, `findRoom()`, `showMenu()`, `sendMessage()` |
-| **Operator Overloading** | `==`, `<`, `+`, `+=`, `<<`, `>>` (cin/cout), explicit cast |
-| **Type Conversion** | `User→string`, `Room→string`, `Message→string` |
-| **Static Members** | `totalMessages`, `totalRooms`, `totalAccounts`, `onlineCount` |
-| **Friend Functions** | `operator<<` and `operator>>` in Message, User, Person, Room |
-| **cin/cout Overloading** | `operator>>` for Message input; `operator<<` for display |
-| **Single Inheritance** | `Contact ← Person`, `AccountHolder ← Person` |
-| **Multiple Inheritance** | `User ← Contact + AccountHolder` |
-| **Multilevel Inheritance** | `Admin ← User ← (Contact,AccountHolder) ← Person` |
-| **Hierarchical Inheritance** | `Room ← BaseRoom`, `AnnouncementRoom ← BaseRoom` |
-| **Virtual Base Class** | `virtual Person` in Contact & AccountHolder (solves diamond) |
-| **Compile-time Polymorphism** | Function overloading, operator overloading |
-| **Runtime Polymorphism** | `virtual displayInfo()`, `getRole()`, `getType()` |
-| **Pointer to Derived Class** | `BaseRoom* br = room; br->displayInfo();` in AppState |
-| **Abstract Base Class** | `Person`, `BaseRoom`, `ISerializable` (pure virtual methods) |
-| **Virtual Functions** | `displayInfo()`, `getRole()`, `getType()`, `getMemberCount()` |
-| **Templates** | `Payload<T>`, `FileManager::appendToFile<T>`, `readFromFile<T>` |
-| **File Handling** | `fstream` in FileManager — users.dat, rooms.dat |
+| Concept                       | Where                                                              |
+| ----------------------------- | ------------------------------------------------------------------ |
+| **Classes & Objects**         | All header files                                                   |
+| **Array of Objects**          | `vector<User>`, `vector<Room>`, `vector<Message>` in AppState/Room |
+| **Object References**         | `AppState&`, `Room&`, function parameters                          |
+| **Memory Allocation**         | `new AppState()` / `delete instance` in singleton                  |
+| **Default Constructor**       | All classes                                                        |
+| **Parameterised Constructor** | All classes                                                        |
+| **Copy Constructor**          | Message, User, Room, Person, Contact, AccountHolder                |
+| **Destructor**                | All classes; virtual in hierarchy                                  |
+| **Function Overloading**      | `addMessage()`, `findRoom()`, `showMenu()`, `sendMessage()`        |
+| **Operator Overloading**      | `==`, `<`, `+`, `+=`, `<<`, `>>` (cin/cout), explicit cast         |
+| **Type Conversion**           | `User→string`, `Room→string`, `Message→string`                     |
+| **Static Members**            | `totalMessages`, `totalRooms`, `totalAccounts`, `onlineCount`      |
+| **Friend Functions**          | `operator<<` and `operator>>` in Message, User, Person, Room       |
+| **cin/cout Overloading**      | `operator>>` for Message input; `operator<<` for display           |
+| **Single Inheritance**        | `Contact ← Person`, `AccountHolder ← Person`                       |
+| **Multiple Inheritance**      | `User ← Contact + AccountHolder`                                   |
+| **Multilevel Inheritance**    | `Admin ← User ← (Contact,AccountHolder) ← Person`                  |
+| **Hierarchical Inheritance**  | `Room ← BaseRoom`, `AnnouncementRoom ← BaseRoom`                   |
+| **Virtual Base Class**        | `virtual Person` in Contact & AccountHolder (solves diamond)       |
+| **Compile-time Polymorphism** | Function overloading, operator overloading                         |
+| **Runtime Polymorphism**      | `virtual displayInfo()`, `getRole()`, `getType()`                  |
+| **Pointer to Derived Class**  | `BaseRoom* br = room; br->displayInfo();` in AppState              |
+| **Abstract Base Class**       | `Person`, `BaseRoom`, `ISerializable` (pure virtual methods)       |
+| **Virtual Functions**         | `displayInfo()`, `getRole()`, `getType()`, `getMemberCount()`      |
+| **Templates**                 | `Payload<T>`, `FileManager::appendToFile<T>`, `readFromFile<T>`    |
+| **File Handling**             | `fstream` in FileManager — users.dat, rooms.dat                    |
 
 ---
 
