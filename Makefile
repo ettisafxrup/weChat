@@ -1,6 +1,6 @@
 # Let the .o files into a folder named object and the executable into a folder named release. Each time we compile, we will make a version of that file like weChat1.0, weChat1.1, etc. We will also add a clean command to remove all the .o files and the release folder. write a simple makefile in following this. one line makefile
 
-BUILD_FILE = build_log.txt
+BUILD_FILE = build.log
 VERSION = 1
 SUB_VERSION = $(shell cat $(BUILD_FILE) || echo 0)
 
