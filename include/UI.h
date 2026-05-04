@@ -121,8 +121,8 @@ public:
         std::cout << "\n"
                   << "    " << WHITE << "[1]" << RESET << " Login\n"
                   << "    " << WHITE << "[2]" << RESET << " Register\n"
-                  << "    " << WHITE << "[3]" << RESET << " Exit\n\n"
-                  << YELLOW << "  Choice > " << RESET;
+                  << "    " << WHITE << "[0]" << RESET << " Exit\n\n"
+                  << YELLOW << "  >> " << RESET;
         std::cout.flush();
     }
 
@@ -217,8 +217,8 @@ public:
             << "  " << WHITE << "[3]" << RESET << " My Rooms\n"
             << "  " << WHITE << "[4]" << RESET << " View Profile\n"
             << "  " << WHITE << "[5]" << RESET << " Statistics\n"
-            << "  " << WHITE << "[6]" << RESET << " Logout\n\n"
-            << YELLOW << "  Choice > " << RESET;
+            << "  " << WHITE << "[0]" << RESET << " Logout\n\n"
+            << YELLOW << "  >> " << RESET;
         std::cout.flush();
     }
 

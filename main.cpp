@@ -36,7 +36,7 @@ int main()
             case 2:
                 ui.showRegister();
                 break;
-            case 3:
+            case 0:
                 running = false;
                 break;
             default:
@@ -87,7 +87,7 @@ int main()
             case 5:
                 ui.showStats();
                 break;
-            case 6:
+            case 0:
                 app.logout();
                 std::cout << GREEN << "\n  [OK] Logged out.\n"
                           << RESET;
