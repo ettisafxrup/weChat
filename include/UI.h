@@ -468,7 +468,7 @@ public:
                 if (!room)
                     break;
                 Utils::printHeader("ROOM INFO");
-                // Pointer-to-derived-class stored as BaseRoom* → virtual dispatch
+                // Runtime Polymorphism: call via BaseRoom* base pointer
                 BaseRoom *br = room;
                 state.displayRoomInfo(br);
                 Utils::pressEnter();
